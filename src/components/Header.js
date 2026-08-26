@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Search } from "lucide-react";
 
 export default function Header() {
     return (
@@ -22,9 +23,11 @@ export default function Header() {
                             className="w-full bg-transparent text-sm text-[#342A2A] outline-none placeholder:text-[#777]"
                         />
 
-                        <span className="text-[#342A2A]">
-                            🔍
-                        </span>
+                        <Search
+                            size={24}
+                            strokeWidth={2}
+                            className="text-[#342A2A]"
+                        />
                     </div>
                 </div>
 

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function ProductCard({
     name,
@@ -7,42 +6,40 @@ export default function ProductCard({
     distance,
     type,
     image,
-    href = "#",
 }) {
     return (
-        <Link href={href} className="group">
-            <article className="flex gap-5">
+        <article className="self-stretch inline-flex justify-between items-center">
+            {/* Imagem do produto */}
+            <div className="relative h-44 w-80 shrink-0">
+                <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover rounded-2xl"
+                />
+            </div>
 
-                {/* Imagem */}
-                <div className="relative h-28 w-44 shrink-0 overflow-hidden rounded-xl">
-                    <Image
-                        src={image}
-                        alt={name}
-                        fill
-                        className="object-cover transition duration-300 group-hover:scale-105"
-                    />
-                </div>
-
-                {/* Informações */}
-                <div className="flex flex-col justify-center">
-                    <h3 className="text-base font-semibold text-[#342A2A]">
+            {/* Informações do produto */}
+            <div className="flex flex-1 flex-col justify-between p-5">
+                <div>
+                    <h3 className="w-48 h-4 justify-center text-[#342a2a] text-lg font-bold font-['Inter'] leading-9 mb-5">
                         {name}
                     </h3>
 
-                    <p className="mt-1 text-sm text-[#666]">
-                        Usado • {condition}
+                    <p className="self-stretch justify-center text-stone-600 text-sm font-medium font-['Inter']">
+                        {condition}
                     </p>
 
-                    <p className="text-sm text-[#666]">
-                        {distance} de você
-                    </p>
-
-                    <p className="text-sm text-[#666]">
-                        {type}
+                    <p className="self-stretch justify-center text-stone-600 text-sm font-medium font-['Inter']">
+                        {distance}
                     </p>
                 </div>
 
-            </article>
-        </Link>
+                {/* Tipo de anúncio */}
+                <span className="self-stretch justify-center text-stone-600 text-sm font-medium font-['Inter']">
+                    {type}
+                </span>
+            </div>
+        </article>
     );
 }

@@ -8,23 +8,28 @@ export default function CategoryCard({
     href,
 }) {
     return (
-        <Link href={href} className="group block">
-            <article>
-                <h3 className="text-lg font-semibold text-[#342A2A]">
-                    {title}
-                </h3>
+        <Link href={href} className="group">
+            <article className="relative h-64 overflow-hidden rounded-2xl">
+                {/* Imagem */}
+                <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-105"
+                />
 
-                <p className="mb-4 text-sm text-[#666]">
-                    {description}
-                </p>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/40" />
 
-                <div className="relative h-52 overflow-hidden rounded-lg">
-                    <Image
-                        src={image}
-                        alt={title}
-                        fill
-                        className="object-cover transition duration-300 group-hover:scale-105"
-                    />
+                {/* Texto */}
+                <div className="absolute bottom-0 left-0 p-6 text-white">
+                    <h3 className="text-xl font-bold">
+                        {title}
+                    </h3>
+
+                    <p className="mt-1 text-sm">
+                        {description}
+                    </p>
                 </div>
             </article>
         </Link>

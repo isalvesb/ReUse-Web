@@ -5,6 +5,56 @@ import ProductCard from "@/components/ProductCard";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
+const products = [
+  {
+    id: 1,
+    name: "Cadeira de madeira",
+    condition: "Bom estado",
+    distance: "1 km",
+    type: "Venda",
+    image: "/images/itens/cadeira.jpg",
+  },
+  {
+    id: 2,
+    name: "Tênis Adidas Pink",
+    condition: "Bom estado",
+    distance: "2 km",
+    type: "Venda",
+    image: "/images/itens/tenis-adidas.png",
+  },
+  {
+    id: 3,
+    name: "Jaqueta de couro",
+    condition: "Tam 40",
+    distance: "1,4 km",
+    type: "Troca",
+    image: "/images/itens/jaqueta.jpg",
+  },
+  {
+    id: 4,
+    name: "iPhone 17 Pro",
+    condition: "Ótimo estado",
+    distance: "1,4 km",
+    type: "Venda",
+    image: "/images/itens/iphone17.png",
+  },
+  {
+    id: 5,
+    name: "Teclado gamer",
+    condition: "Bom estado",
+    distance: "2 km",
+    type: "Doação",
+    image: "/images/itens/teclado.jpg",
+  },
+  {
+    id: 6,
+    name: "Canon EOS 60D",
+    condition: "Bom estado",
+    distance: "2 km",
+    type: "Venda",
+    image: "/images/itens/canon.png",
+  },
+];
 
 
 export default function Home() {
@@ -18,41 +68,38 @@ export default function Home() {
 
         {/* CATEGORIAS */}
         <section className="mx-auto mt-16 max-w-7xl px-6">
-
           <h2 className="text-2xl font-bold text-[#342A2A]">
             Descubra por categorias
           </h2>
 
           <div className="mt-8 grid gap-8 md:grid-cols-2">
-
             <CategoryCard
               title="Peças raras"
               description="Se apaixone por peças clássicas"
-              image="/images/camera.jpg"
+              image="/images/categorias/camera.png"
               href="/pecas-raras"
             />
 
             <CategoryCard
               title="Sapatos para todos os gostos"
               description="Encontre seu par perfeito"
-              image="/images/shoes.jpg"
+              image="/images/categorias/tenis.png"
               href="/sapatos"
             />
 
             <CategoryCard
               title="Eletrônicos"
-              description="Usado sim, mas continuam tinindo"
-              image="/images/notebook.jpg"
+              description="Usados sim, mas continuam tinindo"
+              image="/images/categorias/notebook.png"
               href="/eletronicos"
             />
 
             <CategoryCard
               title="Para sua casa"
               description="Decoração com estilo único para você inovar"
-              image="/images/sofa.jpg"
+              image="/images/categorias/sofa.png"
               href="/moveis"
             />
-
           </div>
         </section>
 
@@ -67,50 +114,50 @@ export default function Home() {
 
             <ProductCard
               name="Cadeira de madeira"
-              condition="Bom estado"
-              distance="1 km"
+              condition="Usado • Bom estado"
+              distance="1 km de você"
               type="Venda"
-              image="/images/chair.jpg"
+              image="/images/itens/cadeira.jpg"
             />
 
             <ProductCard
               name="Tênis Adidas Pink"
-              condition="Bom estado"
-              distance="2 km"
+              condition="Usado • Bom estado"
+              distance="2 km de você"
               type="Venda"
-              image="/images/pink-shoes.jpg"
+              image="/images/itens/tenis-adidas.png"
             />
 
             <ProductCard
               name="Jaqueta de couro"
-              condition="Tam 40"
-              distance="1,4 km"
+              condition="Usado • Tam 40"
+              distance="1,4 km de você"
               type="Troca"
-              image="/images/jacket.jpg"
+              image="/images/itens/jaqueta.jpg"
             />
 
             <ProductCard
               name="Iphone 17 Pro"
-              condition="Ótimo estado"
-              distance="1,4 km"
+              condition="Usado • Ótimo estado"
+              distance="1,4 km de você"
               type="Venda"
-              image="/images/iphone.jpg"
+              image="/images/itens/iphone17.png"
             />
 
             <ProductCard
               name="Teclado gamer"
-              condition="Bom estado"
-              distance="2 km"
+              condition="Usado • Bom estado"
+              distance="2 km de você"
               type="Doação"
-              image="/images/keyboard.jpg"
+              image="/images/itens/teclado.jpg"
             />
 
             <ProductCard
               name="Canon EOS 60D"
-              condition="Bom estado"
-              distance="2 km"
+              condition="Usado • Bom estado"
+              distance="2 km de você"
               type="Venda"
-              image="/images/canon.jpg"
+              image="/images/itens/canon.png"
             />
 
           </div>
@@ -125,18 +172,18 @@ export default function Home() {
 
         {/* BANNER APP */}
 
-        <section className="relative mt-30 mx-auto flex h-64 w-275 items-center overflow-hidden rounded-2xl bg-[#ebbbeb]">
+        <section className="relative mt-30 mx-auto flex h-64 w-275 items-center overflow-visible rounded-2xl bg-[#ebbbeb]">
 
           {/* Conteúdo */}
           <div className="absolute left-27.25 top-1/2 flex w-96 -translate-y-1/2 flex-col items-start gap-2">
 
             {/* Logo */}
-            <Image
+            < Image
               src="/images/logo/ReUse-marrom.png"
               alt="ReUse"
               width={351}
               height={39}
-              className="h-auto w-37.5 object-contain"
+              className="h-auto w-351 object-contain"
             />
 
             {/* Título */}
@@ -146,21 +193,21 @@ export default function Home() {
 
             {/* Texto */}
             <p className="font-(--font-krona) text-base leading-6 text-[#342A2A]">
-              <span className="font-bold">
-                + 1.240 itens
-              </span>{" "}
+              <span className="font-bold">+ 1.240 itens</span>{" "}
               ganharam um novo destino este mês.
             </p>
 
-            {/* Imagem */}
-            <Image
-              src="/images/app/baixar-app.png"
-              alt="baixe o app"
-              width={395}
-              height={298}
-              className="w-96 h-72 "
-            />
+
           </div>
+
+          {/* Imagem */}
+          <Image
+            src="/images/app/celular.png"
+            alt="Aplicativo ReUse"
+            width={395}
+            height={298}
+            className="absolute right-12 bottom-0 h-298px w-auto object-contain"
+          />
 
         </section>
       </main>
