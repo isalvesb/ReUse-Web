@@ -16,6 +16,7 @@ export default function Header() {
                         width={130}
                         height={16}
                         alt="Logo creme"
+                        className="h-auto w-32"
                         priority />
                 </Link>
 
