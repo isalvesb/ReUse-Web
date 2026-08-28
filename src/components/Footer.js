@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="mt-20 bg-[#342A2A] px-8 py-12 text-[#F8F1E5]">
+        <footer className="mt-20 bg-reuse-brown px-8 py-12 text-reuse-cream">
             <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-4">
 
                 {/* Logo */}
@@ -18,11 +18,11 @@ export default function Footer() {
 
                 {/* Categorias */}
                 <div>
-                    <h3 className="mb-4 font-semibold">
+                    <h3 className="mb-4 font-bold">
                         Categorias
                     </h3>
 
-                    <ul className="space-y-3 text-sm text-[#ddd]">
+                    <ul className="space-y-3 text-sm text-reuse-white">
                         <li>
                             <Link href="/pecas-raras">Peças raras</Link>
                         </li>
@@ -47,11 +47,11 @@ export default function Footer() {
 
                 {/* Conta */}
                 <div>
-                    <h3 className="mb-4 font-semibold">
+                    <h3 className="mb-4 font-bold">
                         Minha Conta
                     </h3>
 
-                    <ul className="space-y-3 text-sm text-[#ddd]">
+                    <ul className="space-y-3 text-sm text-reuse-white">
                         <li>
                             <Link href="/minha-vitrine">
                                 Minha Vitrine
@@ -80,11 +80,11 @@ export default function Footer() {
 
                 {/* Redes */}
                 <div>
-                    <h3 className="mb-4 font-semibold">
+                    <h3 className="mb-4 font-bold">
                         Redes Sociais
                     </h3>
 
-                    <ul className="space-y-3 text-sm text-[#ddd]">
+                    <ul className="space-y-3 text-sm text-reuse-white">
                         <li>
                             <a href="#">Facebook</a>
                         </li>
@@ -101,7 +101,7 @@ export default function Footer() {
 
             </div>
 
-            <div className="mx-auto mt-12 max-w-7xl border-t border-[#554949] pt-6 text-center text-xs text-[#bbb]">
+            <div className="mx-auto mt-12 max-w-7xl border-t border-reuse-cream pt-6 text-center text-xs text-reuse-cream">
                 ReUse © 2026 - Todos os direitos reservados
             </div>
         </footer>

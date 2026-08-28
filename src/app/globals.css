@@ -9,6 +9,17 @@
   --reuse-white: #ffffff;
 }
 
+/* Tailwind CSS v4 directive; suppress false positives from generic CSS linters. */
+/* stylelint-disable-next-line at-rule-no-unknown */
+@theme {
+  --color-reuse-brown: var(--reuse-brown);
+  --color-reuse-brown-light: var(--reuse-brown-light);
+  --color-reuse-cream: var(--reuse-cream);
+  --color-reuse-pink: var(--reuse-pink);
+  --color-reuse-beige: var(--reuse-beige);
+  --color-reuse-white: var(--reuse-white);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,9 +30,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--reuse-cream);
+  background: var(--reuse-white);
   color: var(--reuse-brown);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", "KronaOne", "Syne", sans-serif;
 }
 
 button,

@@ -22,7 +22,7 @@ export default function CategoryCard({
                 <div className="absolute inset-0 bg-black/30 transition duration-300 group-hover:bg-black/40" />
 
                 {/* Texto */}
-                <div className="absolute bottom-0 left-0 p-6 text-white">
+                <div className="absolute bottom-0 left-0 p-6 text-reuse-white">
                     <h3 className="text-xl font-bold">
                         {title}
                     </h3>

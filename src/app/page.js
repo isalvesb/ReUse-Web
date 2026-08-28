@@ -9,48 +9,48 @@ const products = [
   {
     id: 1,
     name: "Cadeira de madeira",
-    condition: "Bom estado",
-    distance: "1 km",
+    condition: "Usado • Bom estado",
+    distance: "1 km de você",
     type: "Venda",
     image: "/images/itens/cadeira.jpg",
   },
   {
     id: 2,
     name: "Tênis Adidas Pink",
-    condition: "Bom estado",
-    distance: "2 km",
+    condition: "Usado • Bom estado",
+    distance: "2 km de você",
     type: "Venda",
     image: "/images/itens/tenis-adidas.png",
   },
   {
     id: 3,
     name: "Jaqueta de couro",
-    condition: "Tam 40",
-    distance: "1,4 km",
+    condition: "Usado • Tam 40",
+    distance: "1,4 km de você",
     type: "Troca",
     image: "/images/itens/jaqueta.jpg",
   },
   {
     id: 4,
     name: "iPhone 17 Pro",
-    condition: "Ótimo estado",
-    distance: "1,4 km",
+    condition: "Usado • Ótimo estado",
+    distance: "1,4 km de você",
     type: "Venda",
     image: "/images/itens/iphone17.png",
   },
   {
     id: 5,
     name: "Teclado gamer",
-    condition: "Bom estado",
-    distance: "2 km",
+    condition: "Usado • Bom estado",
+    distance: "2 km de você",
     type: "Doação",
     image: "/images/itens/teclado.jpg",
   },
   {
     id: 6,
     name: "Canon EOS 60D",
-    condition: "Bom estado",
-    distance: "2 km",
+    condition: "Usado • Bom estado",
+    distance: "2 km de você",
     type: "Venda",
     image: "/images/itens/canon.png",
   },
@@ -68,7 +68,7 @@ export default function Home() {
 
         {/* CATEGORIAS */}
         <section className="mx-auto mt-16 max-w-7xl px-6">
-          <h2 className="text-2xl font-bold text-[#342A2A]">
+          <h2 className="text-2xl font-bold text-reuse-brown">
             Descubra por categorias
           </h2>
 
@@ -106,7 +106,7 @@ export default function Home() {
         {/* PRODUTOS */}
         <section className="mx-auto mt-16 max-w-7xl px-6">
 
-          <h2 className="text-2xl font-bold text-[#342A2A]">
+          <h2 className="text-2xl font-bold text-reuse-brown">
             Produtos perto de você
           </h2>
 
@@ -163,7 +163,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 flex justify-center">
-            <button className="rounded-xl bg-[#ebbbeb] px-8 py-3 text-sm font-semibold text-[#342A2A] transition hover:scale-105">
+            <button className="rounded-xl bg-reuse-pink px-8 py-3 text-sm font-semibold text-reuse-brown transition hover:scale-105">
               Ver mais
             </button>
           </div>
@@ -172,7 +172,7 @@ export default function Home() {
 
         {/* BANNER APP */}
 
-        <section className="relative mt-30 mx-auto flex h-64 w-275 items-center overflow-visible rounded-2xl bg-[#ebbbeb]">
+        <section className="relative mt-30 mx-auto flex h-64 w-275 items-center overflow-visible rounded-2xl bg-reuse-pink">
 
           {/* Conteúdo */}
           <div className="absolute left-27.25 top-1/2 flex w-96 -translate-y-1/2 flex-col items-start gap-2">
@@ -187,12 +187,12 @@ export default function Home() {
             />
 
             {/* Título */}
-            <h2 className="font-(--font-krona) text-3xl leading-9 text-[#342A2A]">
+            <h2 className="font-(--font-krona) text-3xl leading-9 text-reuse-brown">
               BAIXE AGORA O APP
             </h2>
 
             {/* Texto */}
-            <p className="font-(--font-krona) text-base leading-6 text-[#342A2A]">
+            <p className="font-(--font-krona) text-base leading-6 text-reuse-brown">
               <span className="font-bold">+ 1.240 itens</span>{" "}
               ganharam um novo destino este mês.
             </p>
