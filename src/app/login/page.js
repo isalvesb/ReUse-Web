@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function Login() {
     return (
@@ -79,12 +80,13 @@ export default function Login() {
                         </div>
 
                         {/* BOTÃO ENTRAR */}
-                        <button
+                        <Button
                             type="submit"
-                            className="mt-8 h-12 w-full rounded-3xl bg-reuse-pink font-medium text-reuse-brown transition hover:opacity-90"
+                            variant="primary"
+                            className="mt-8 h-12 w-full rounded-3xl"
                         >
                             Entrar
-                        </button>
+                        </Button>
 
                     </form>
 
@@ -102,34 +104,38 @@ export default function Login() {
                     </div>
 
                     {/* GOOGLE */}
-                    <button
+                    <Button
                         type="button"
-                        className="flex h-12 w-full items-center justify-center gap-3 rounded-3xl border border-reuse-pink text-[#FBEFE0] transition hover:bg-reuse-white/5"
-                    >
+                        variant="outline"
+                        className="h-12 w-full rounded-3xl border-reuse-pink text-reuse-cream">
+
                         <Image
                             src="/images/logo/Icon-google.png"
                             width={21}
                             height={20}
                             alt="Ícone do Google"
+                            className="mr-3"
                         />
 
                         Continuar com Google
-                    </button>
+                    </Button>
 
                     {/* FACEBOOK */}
-                    <button
+                    <Button
                         type="button"
-                        className="mt-5 flex h-12 w-full items-center justify-center gap-3 rounded-3xl border border-reuse-pink text-[#FBEFE0] transition hover:bg-reuse-white/5"
+                        variant="outline"
+                        className="mt-4 h-12 w-full rounded-3xl border-reuse-pink text-reuse-cream"
                     >
                         <Image
                             src="/images/logo/Icon-facebook.png"
                             width={20}
                             height={20}
                             alt="Ícone do Facebook"
+                            className="mr-3"
                         />
 
                         Continuar com Facebook
-                    </button>
+                    </Button>
 
                 </div>
 
