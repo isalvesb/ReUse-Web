@@ -68,7 +68,7 @@ export default function Header() {
                     </Link>
 
                     <Link
-                        href="/login"
+                        href="/perfil"
                         className="font-semibold hover:text-reuse-pink"
                     >
                         Entrar
